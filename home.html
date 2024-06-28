@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Temperature converter website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Convert Temperature in one click!">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site name" content="Temperature Converter Website">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="—Pngtree—thermometer_4365013.png" type="image/x-icon">
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">online Temperature Converter</h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="travel.mp4.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2></h2>
+            <h3>Convert Temperature with Ease.</h3>
+            <p>Quick and accurate temperature conversions between Celcius, Fahrenheit and Kelvin.</p>
+            <a href="converter.html">Start Converting</a>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="history.html">Conversion History</a></li>
+            <li><a href="FAQ.html">FAQs</a></li>
+            <li><a href="blog.html">Blog/Articles</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+     
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () =>{
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })     
+    </script>
+</body>
+</html> 

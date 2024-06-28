@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion History</title>
+    <link rel="stylesheet" href="history.css">
+</head>
+<body>
+    <header>
+        <h1>Conversion History</h1>
+        <h4><a href="home.html">Home</a></h4>
+    </header>
+    <main>
+        <section>
+            <h2>Recent Conversions</h2>
+            <ul id="conversion-list">
+                <!-- Conversion history items will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+          &copy;Courtesy of Group 8, Cyber Security Students, Class 2028, LAUTECH. <br>
+            <a href="home.html">Home</a> | <a href="converter.html">Converter</a> | <a href="contact.html">Contact Us</a> | <a href="blog.html">Blog/Articles</a> | <a href="about.html">About Us</a> | <a href="FAQ.html">FAQs</a>
+        </p>
+    </footer>
+    <script>
+        window.onload = function() {
+    // Get the conversion list element
+    const conversionList = document.getElementById('conversion-list');
+
+    // Fetch conversion history from backend or local storage
+    const conversionHistory = getConversionHistory(); // Implement this function to retrieve conversion history
+
+    // Render conversion history items
+    conversionHistory.forEach(function(conversion) {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `${conversion.from} to ${conversion.to}: ${conversion.result}`;
+        conversionList.appendChild(listItem);
+    });
+};
+
+// Dummy function to simulate fetching conversion history
+function getConversionHistory() {
+    // Return an array of conversion objects
+    return [
+        { from: 'Celsius', to: 'Fahrenheit', result: '32°F' },
+        { from: 'Fahrenheit', to: 'Celsius', result: '0°C' },
+        { from: 'Celsius', to: 'Kelvin', result: '273.15K' }
+        // Add more conversion objects as needed
+    ];
+}
+    </script>
+</body>
+</html>
