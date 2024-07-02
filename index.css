@@ -181,19 +181,80 @@
     color: #03a9f4;
 }
 
-@media(max-width: 798px) {
-    .showcase,
-    .showcase header{
-        padding: 9%;
+@media (min-width: 768px) {
+    .showcase {
+      height: 80vh;
     }
-    .text h2 {
-        font-size: 3em;
+    .text {
+      width: 60%;
+      margin: 0 auto;
     }
-    .text h3 {
-        font-size: 2em;
+    .social {
+      margin-top: 40px;
     }
-    .text p{
-        font-size: 1.1em;
-        max-width: 60%;
+    .menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 5px;
     }
-}
+    .menu ul {
+      flex-direction: column;
+    }
+    .menu li {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 767px) {
+    .showcase {
+      height: 60vh;
+    }
+    .text {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .social {
+      margin-top: 20px;
+    }
+    .menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .menu ul {
+      flex-direction: column;
+    }
+    .menu li {
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Toggle Button Styles */
+  
+  .toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .toggle.active {
+    background-color: #666;
+  }
+  
+  .showcase.active {
+    background-color: #666;
+  }
