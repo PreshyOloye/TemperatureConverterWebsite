@@ -1,5 +1,7 @@
+*{
+    font-family:"poppins", sans-serif;
+} 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -7,12 +9,12 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(Picture\ of\ a\ thermometer\ on\ a\ dark.jpg);
     background-repeat: no-repeat;
-    background-size: 130% 100%;
-    background-position: center;
 }
-
+.image{
+    position: absolute;
+    object-fit: cover;
+}
 .overlay{
     position: absolute;
     mix-blend-mode: overlay;
@@ -47,7 +49,7 @@ header {
 }
 
 header h4 a{
-    font-size: 1.5em;
+    font-size: 0.8em;
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
@@ -57,7 +59,8 @@ header h4 a:hover{
     color: #6e6e6e;
 }
 header h1{
-    font-size: 3em;
+    font-size: 2em;
+    max-width: 50%;
 }
 
 section {
@@ -147,8 +150,8 @@ bottom: 0;
 color: #fff;
 padding: 20px;
 margin: 0;
-font-size: 1.3em;
-position: fixed;
+font-size: 0.5em;
+position: sticky;
 width: 100%;
 background-color: #333;
 }
@@ -160,3 +163,57 @@ background-color: #333;
 .footer p a:hover{
     color: #fff;
 }
+@media (min-width: 1024px) {
+    body {
+      font-size: 0.8em;
+    }
+   .container {
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+      border-radius: 10px;
+    }
+    header {
+      margin-bottom: 30px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+  }
+
+@media (max-width: 1024px) {
+    .container {
+       width: 70%;
+     }
+     body {
+       font-size: 1em;
+     }
+     header {
+       margin-bottom: 20px;
+     }
+     section {
+       margin-bottom: 20px;
+     }
+   }
+   @media screen and (max-width: 481px) {
+    body {
+      font-size: 16px;
+    }
+   .container {
+      width: 100%;
+      padding: 20px;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    header {
+      padding: 50px;
+      width: 100%;
+    }
+    section {
+      padding: 10px;
+    }
+   .footer {
+      padding: 10px;
+      text-align: center;
+      clear: both;
+      height: 50px;
+  }
